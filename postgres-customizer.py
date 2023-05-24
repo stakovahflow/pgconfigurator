@@ -72,13 +72,13 @@ try:
 		print('System Disk: %s' % (DISKTYPE))
 except:
 	
-	print('\033[1m')
+	#print('\033[1m')
 	LINE()
 	print('Invalid arguments/options provided')
 	parser.print_help()
 	morehelp()
 	LINE()
-	print('\033[0m' + '')
+	#print('\033[0m' + '')
 	exit(0)
 
 #######################################################################
@@ -108,7 +108,8 @@ print('effective_io_concurrency = %d' % (effective_io_concurrency))
 print('max_worker_processes = %d' % (max_worker_processes))
 print('max_parallel_maintenance_workers = %d' % (max_parallel_maintenance_workers))
 if max_parallel_workers_per_gather >= 1:
-	print('max_parallel_workers_per_gather = %d' % (max_parallel_workers_per_gather)) # If less than 1, this setting should not be used
+	print('max_parallel_workers_per_gather = %d' % (max_parallel_workers_per_gather))
+	# If less than 1, this setting should not be used
 print('max_parallel_workers = %d' % (max_parallel_workers))
 print('max_wal_size = 4GB') # Static setting
 print('min_wal_size = 1GB') # Static setting
