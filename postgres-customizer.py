@@ -72,7 +72,7 @@ try:
 	if debugging:
 		LINE()
 		print('System CPU thread count: %d' % (CPU))
-		print('System Memory: %d GB' % (RAM))
+		print('System Memory: %d MB' % (RAM))
 		print('System Disk: %s' % (DISKTYPE))
 except:
 	
