@@ -41,7 +41,9 @@ try:
 	else:
 		CPU=int(input('System ' + '\033[1m' + 'CPU'+ '\033[m' + ' Threads (integer): '))
 	# Memory configuration
-	# 
+	# Setting memory variable, 
+	# Then multiplying by 1024
+	# RAM variable to store the product
 	if args.mem:
 		MEM=int(args.mem)
 	else:
