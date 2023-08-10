@@ -42,10 +42,8 @@ try:
 
 	if args.mem:
 		RAM=int(args.mem)*1024
-		if debugging:
-			print('System Memory: %d' % (RAM))
 	else:
-		RAM=int(input('System ' + '\033[1m' + 'Memory'+ '\033[m' + ' (in GB) (integer): '))
+		RAM=int(input('System ' + '\033[1m' + 'Memory'+ '\033[m' + ' (in GB) (integer): '))*1024
 	if RAM < 1:
 		exit(1)
 
