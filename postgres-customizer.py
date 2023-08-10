@@ -35,18 +35,22 @@ if args.verbose:
 if debugging:
 	print('Debugging on')
 try:
+    # CPU configuration
 	if args.cpu:
 		CPU=int(args.cpu)
 	else:
 		CPU=int(input('System ' + '\033[1m' + 'CPU'+ '\033[m' + ' Threads (integer): '))
-
+	# Memory configuration
+	# 
 	if args.mem:
-		RAM=int(args.mem)*1024
+		MEM=int(args.mem)
 	else:
-		RAM=int(input('System ' + '\033[1m' + 'Memory'+ '\033[m' + ' (in GB) (integer): '))*1024
-	if RAM < 1:
+		MEM=int(input('System ' + '\033[1m' + 'Memory'+ '\033[m' + ' (in GB) (integer): '))
+	if MEM < 1:
+		print("Memory value unacceptable %s" % (MEM))
 		exit(1)
-
+	else:
+		RAM = MEM * 1024
 	if args.disk:
 		DISK=args.disk.lower()
 	else:
